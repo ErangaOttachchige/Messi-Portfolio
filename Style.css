@@ -1,0 +1,766 @@
+/* Apply a universal box-sizing */
+* {
+  font-family: "Poppins", sans-serif; /* Specify font(s) using Google Fonts */
+  padding: 0;
+  margin: 0; 
+  box-sizing: border-box; /* Border box sizing */
+  text-decoration: none; /* Remove text decoration */
+  list-style: none; 
+}
+
+/* Style the main header */
+.main-header {
+  position: absolute; 
+  width: 100%; 
+  display: flex;
+  right: 0; 
+  top: 0; 
+  z-index: 1000; /* Stack order */
+  align-items: center; 
+  justify-content: space-between;
+  padding: 40px 12%; 
+  background: transparent; /* Transparent background */
+  transition: all 0.5s ease; /* Transition effects */
+}
+
+/* Style the logo */
+.logo {
+  font-weight: 700; 
+  font-size: 40px; 
+  color: wheat; 
+  transition: all 0.55s ease; /* Transition effects */
+  border-bottom: 2px solid transparent; /* Border style */
+}
+.logo:hover {
+  color: rgba(0, 0, 0, 0.8); /* Change color on hover */
+  border-bottom: 2px solid rgb(255, 255, 255); /* Change border on hover */
+}
+
+/* Style the navigation list */
+.navlist {
+  display: flex; /* Use flexbox for layout */
+}
+
+/* Style the navigation links */
+.navlist a {
+  font-weight: bold; 
+  margin-left: 50px; 
+  font-size: 20px; 
+  color: rgb(255, 255, 255); 
+  transition: all 0.55s ease; /* Transition effects */
+  border-bottom: 2px solid transparent; /* Border style */
+}
+
+/* Change style of navigation links on hover */
+.navlist a:hover {
+  color: rgba(0, 0, 0, 0.5); 
+  border-bottom: 2px solid rgb(255, 255, 255); 
+}
+
+/* Style the menu icon */
+#menu-icon {
+  display: none; /* Hide the menu icon */
+  font-size: 32px; 
+  color: whitesmoke; 
+  cursor: pointer; 
+  z-index: 10001; /* Set the stack order */
+}
+
+/* Style the player */
+.player {
+  width: 100%; 
+  height: 100%; 
+  min-height: 100vh;
+  background: linear-gradient( /* Background gradient */
+    240deg,
+    rgb(2, 12, 51) 5%,
+    rgb(52, 89, 180) 20%,
+    rgb(25, 22, 173) 75%
+  );
+  position: relative; 
+  display: grid; /* Use grid for layout */
+  grid-template-columns: repeat(2, 1fr); /* Two equal-width columns */
+  align-items: center;
+  gap: 2rem; /* Gap between grid items */
+}
+
+/* Style the player image */
+.player-image img {
+  width: 780px; 
+  height: auto;
+}
+
+
+section {
+  padding: 0 20%; 
+}
+
+/* Style the player text */
+.player-text h3 {
+  font-weight: 400; 
+  color: wheat;
+  margin-bottom: 10px; 
+  padding-top: 100px;
+  width: 250px; 
+  margin-left: 15px;
+}
+
+/* Style the h1 elements within .player-text */
+.player-text h1 {
+  font-family: "Playpen Sans", cursive; /* Set the font family */
+  line-height: 1;
+  color: rgb(242, 210, 169); 
+  margin: 0 0 45px;
+  font-size: 80px;
+}
+
+/* Style the h2 elements within .player-text */
+.player-text h2 {
+  font-weight: 600; 
+  color: antiquewhite; 
+  margin-top: 5px; 
+  margin-bottom: 10px; 
+}
+
+/* Style the p elements within .player-text */
+.player-text p {
+  color: white; 
+  line-height: 1.8; 
+  margin-bottom: 35px; 
+}
+
+/* Style the a elements within .player-text */
+.player-text a {
+  color: rgb(12, 10, 10);
+  display: inline-block;
+  background: rgb(10, 167, 252); 
+  border: 1px solid transparent; 
+  padding: 12px 30px; 
+  font-weight: 500; 
+  line-height: 1.5; 
+  border-radius: 30px; 
+  text-transform: uppercase; /* Transform the text to uppercase */
+  transition: all 0.55s ease; /* Set the transition */
+}
+
+/* Change style of a elements within .player-text on hover */
+.player-text a:hover {
+  background: transparent; 
+  border: 1px solid white;
+  transform: translateX(10px); /* Move to the right on hover */
+  color: wheat; 
+}
+/* Style the i elements within a elements in .player-text */
+.player-text a i {
+  vertical-align: middle; 
+  margin-right: 10px;
+}
+/* Style the social media icons */
+.Social-media-icons {
+  position: absolute; 
+  padding: 0 10%; 
+  top: 50%; /* Position at the middle */
+  transform: translateY(-50%); /* Center vertically */
+}
+
+/* Style the social media icons */
+.Social-media-icons i {
+  display: block; 
+  margin: 25px 0; 
+  color: wheat; 
+  font-size: 20px; 
+  transition: all 0.5s ease; /* Transition effects */
+}
+
+/* Change style of social media icons on hover */
+.Social-media-icons i:hover {
+  color: rgb(0, 255, 255); 
+  transform: translateX(-5px); 
+}
+
+/* Style the scroll down icon */
+.scroll-down {
+  position: absolute; 
+  bottom: 2.5%; 
+  right: 5%;
+}
+
+/* Style the scroll down icon */
+.scroll-down i {
+  display: block; 
+  padding: 15px; 
+  font-size: 25px;
+  color: wheat; 
+  background: rgb(10, 167, 252);
+  border-radius: 25px; 
+  transition: all 0.5s ease; /* Transition effects */
+}
+
+/* Change style of scroll down icon on hover */
+.scroll-down i:hover {
+  transform: translateY(10px); /* Move down on hover */
+  color: black;
+}
+
+/*Using Media Queries for responsive*/
+
+@media (max-width: 1535px) {
+  header {
+    padding: 15px 3%;
+    transition: 0.2s;
+  }
+  .Social-media-icons {
+    padding: 0 3%;
+    transition: 0.2s;
+  }
+  .scroll-down {
+    right: 3%;
+    transition: 0.2s;
+  }
+}
+
+@media (max-width: 1460px) {
+  section {
+    padding: 0 12%;
+    transition: 0.2s;
+  }
+}
+@media (max-width: 1340px) {
+  .player-image img {
+    width: 100%;
+    height: auto;
+  }
+  .player-text h1 {
+    font-size: 75px;
+    margin: 0 0 30px;
+  }
+  .player-text h3 {
+    margin-bottom: 25px;
+  }
+}
+
+@media (max-width: 1195px) {
+  section {
+    padding: 0 3%;
+    transition: 0.2s;
+  }
+  .player-text {
+    padding-top: 110px;
+  }
+  .player-image {
+    text-align: center;
+  }
+  .player-image img {
+    width: 560px;
+    height: auto;
+  }
+  .player {
+    height: 100%;
+    gap: 1rem;
+    grid-template-columns: 1fr;
+  }
+  .Social-media-icons {
+    display: none;
+  }
+  .scroll-down {
+    display: none;
+  }
+}
+
+@media (max-width: 990px) {
+  #menu-icon {
+    display: block;
+    cursor: pointer;
+    transition: all 0.55s ease;
+  }
+  .navlist {
+    position: absolute;
+    top: 75%;
+    right: -100%;
+    width: 220px;
+    height: auto;
+    background: rgb(27, 65, 159);
+    font-display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 15px;
+    border: 1px solid black;
+    border-radius: 20px;
+    transition: all 0.55s ease;
+  }
+  .navlist a {
+    margin-left: 0;
+    display: block;
+    margin: 10px 0;
+  }
+
+  .navlist.open {
+    right: 0;
+  }
+}
+
+@media (max-width: 680px) {
+  .player-image {
+    width: 100%;
+    height: auto;
+  }
+}
+
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #333;
+  color: white;
+  text-align: center;
+  padding: 10px 0;
+}
+.footer a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+}
+.footer a:hover {
+  color: #26afea;
+}
+
+/* CSS properties for About page */
+
+.about-title h1 {
+  font-family: "Playpen Sans", cursive; /* Specify font(s) using Google Fonts */
+  color: rgba(255, 255, 255, 0.8); /* Semi-transparent color */
+  text-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5); /* Using Shadows */
+  transition: all 0.55s ease;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 20px;
+  padding: 0 20px;
+  box-shadow: 6px 6px 4px rgba(0, 0, 0, 0.5); /* Using Shadows */
+}
+
+.about-content h1 {
+  grid-column: 1 / span 2;
+}
+
+.about-content p {
+  grid-column: 1;
+}
+
+.about-content img {
+  grid-column: 2;
+}
+
+.about-content p {
+  text-transform: capitalize; /* Using Text Effects */
+  width: 100%;
+  float: left;
+}
+
+/* Using Attribute Selectors */
+img[src$=".jpg"] {
+  /*Select elements "img" where the attribute src ends with the value ".jpg"*/
+  float: right;
+  width: 100%;
+  height: auto;
+}
+
+/* Using Pseudo Elements with Generated Content */
+.about-title h1::after {
+  content: " (Greatest of All Time)";
+}
+
+/* Using Transitions */
+.about-content-1 .about-content {
+  transition: all 0.55s ease;
+}
+/* Using User Action Pseudo Class, Using Transforms*/
+.about-content-1 .about-content:hover {
+  transform: scale(1.1);
+}
+
+/* Using Structural Selectors */
+.about-content-1 div:first-child {
+  margin-bottom: 30px;
+}
+
+/* Using Negation Pseudo Class */
+section:not(.about-content-1) {
+  border: 3px solid black;
+}
+
+/* Using Nth Pseudo Class */
+tr:nth-child(odd) {
+  background-color: rgb(16, 158, 210);
+}
+tr:nth-child(even) {
+  background-color: white;
+}
+
+table {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  border: 2px solid rgb(255, 0, 0);
+}
+td,
+th {
+  text-align: center;
+  padding: 5px 7px;
+}
+
+.table caption {
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 15px;
+  font-size: 40px;
+  text-shadow: 2px 2px 1px rgba(255, 255, 255, 0.5); /* Using Shadows */
+}
+
+/* Using Relational Selector */
+.about-content h1 + p {
+  /*adjacent sibling combinator(only selects the element that is immediately after the first element)*/
+  color: #fff;
+  text-shadow: 4px 4px 2px rgba(0, 0, 0, 0.5); /* Using Shadows */
+}
+
+/* Using Border */
+.about-content {
+  border: 2px solid #ffffff;
+}
+
+/* Using Rounded Corners */
+.about-content,
+.about-content img {
+  border-radius: 10px;
+}
+
+/* Using Specificity */
+div.about-content h1 {
+  color: black;
+  text-align: center;
+  margin: 10px 0;
+  text-shadow: 6px 6px 5px rgba(0, 0, 0, 0.5); /* Using Shadows */
+}
+
+/* Using Animations */
+@keyframes headerBox {
+  0%,
+  100% {
+    transform: translatey(0);
+  }
+  50% {
+    transform: translatey(20px);
+  }
+}
+
+.about-title h1 {
+  /*animation-name: animation-duration: animation-delay: animation-timing-function:linear; 
+  animation-iteration-count: animation-direction: */
+  animation: headerBox 3s infinite;
+}
+
+/* CSS properties for Newsletter page */
+
+.news-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    240deg,
+    rgb(2, 12, 51) 5%,
+    rgb(52, 89, 180) 20%,
+    rgb(25, 22, 173) 75%
+  );
+}
+
+/* Using a shadow and a border for the newsletter-container class */
+.newsletter-container {
+  width: 80%;
+  margin-top: 175px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.8);
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  margin-left: 100px;
+  margin-bottom: 100px;
+}
+
+/* Using a gradient and a rounded corner for the news-header */
+.news-header {
+  background: linear-gradient(to right, #129cdc, #063ae4);
+  border-radius: 10px;
+  text-align: center;
+  padding: 20px;
+}
+
+/* Using a text effect for the header title */
+.newsletter-container h1 {
+  font-family: "Playpen Sans", cursive; /* Specify font(s) using Google Fonts */
+  color: wheat;
+  text-shadow: 4px 4px 8px #000000;
+}
+
+/* Using attribute selectors to style the form elements */
+
+form {
+  padding: 20px;
+  color: wheat;
+}
+
+label {
+  display: block;
+  margin-top: 20px;
+}
+
+input[type="text"],
+input[type="email"],
+textarea {
+  width: 80%;
+  padding: 12px;
+  border: 1px solid #ccc;
+}
+
+input[type="submit"] {
+  width: 20%;
+  padding: 10px;
+  background-color: #6eccff;
+  color: rgb(0, 0, 0);
+  border: none;
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+/* Using pseudo elements to generate content before and after the form */
+form::before {
+  content: "Please fill out the form below to subscribe to our newsletter or send us a message.";
+  display: block;
+  margin-bottom: 20px;
+}
+
+form::after {
+  content: "Thank you for your interest in Lionel Messi!";
+  margin-top: 20px;
+  display: block;
+}
+
+/* Using user action pseudo classes to change the appearance of the input elements on focus and hover */
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+textarea:focus {
+  outline: none;
+  border: 2px solid blue;
+}
+
+input[type="submit"]:hover {
+  background-color: #bfe9ff;
+}
+
+/*Using child combinator to select the first element*/
+label:first-child {
+  font-weight: bolder;
+}
+
+/* Using nth pseudo classes to select the first and last textarea elements */
+label:nth-of-type(4) {
+  font-style: italic;
+}
+
+input:nth-child(even) {
+  background: rgb(163, 217, 247);
+}
+
+/*Using negation pseudo classes to select the input elements that are not of the type submit*/
+input:not([type="submit"]) {
+  font-size: 18px;
+}
+
+/*Using nth pseudo classes to select the first textarea elements*/
+textarea:first-of-type {
+  height: 150px;
+}
+
+/* Using validity pseudo classes to show the validity of the input elements */
+
+input:valid {
+  border: 2px solid green;
+}
+
+input:invalid {
+  border: 2px solid red;
+}
+
+/* Using relational selectors to select the input elements that are preceded by a label element */
+label + input {
+  margin-bottom: 20px;
+  margin-top: 5px;
+}
+
+/* Using transforms, transitions and animations to create a simple animation for the header title */
+.news-header h1 {
+  transform: scale(1);
+  transition: transform 2s ease;
+  animation: bounce 2s infinite;
+}
+
+.news-header h1:hover {
+  transform: scale(1.2);
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+}
+
+/*blog Page CSS properties*/
+.blog-body {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    240deg,
+    rgb(2, 12, 51) 5%,
+    rgb(52, 89, 180) 20%,
+    rgb(25, 22, 173) 75%
+  );
+}
+
+.blog-header {
+  position: relative;
+  width: 100%;
+  display: flex;
+  right: 0;
+  top: 0;
+  z-index: 1000;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 12%;
+  background: transparent;
+  transition: all 0.5s ease;
+}
+
+.blog-title {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.blog-title h1 {
+  font-family: "Playpen Sans", cursive; /* Specify font(s) using Google Fonts */
+  text-shadow: 6px 6px 4px rgba(255, 255, 255, 0.5); /* Using Shadows */
+  font-size: 70px;
+  transition: transform 2s ease; /* Using transitions and animations to create a simple animation for the header title */
+  animation: bounce 2s infinite;
+}
+
+
+/* Styling the blog post section */
+.blog-post {
+  /* Setting the text color with semi-transparency */
+  color: rgba(0, 0, 0, 0.8);
+  /* Adding a shadow effect */
+  box-shadow: 4px 4px 2px rgb(80, 80, 80);
+  /* Setting the border */
+  border: 1px solid black;
+  /* Adding rounded corners */
+  border-radius: 10px;
+  /* Adding a gradient background */
+  background: rgb(0, 98, 178);
+  /* Adding a transform effect */
+  transform: scale(0.9);
+  /* Adding a transition effect for the transform property */
+  transition: transform 1s;
+
+  /* Adding an animation */
+  animation-name: moveBox;
+  animation-duration: 1.5s;
+}
+
+/* Adding a hover effect to the blog post section */
+.blog-post:hover {
+  /* Resetting the transform effect on hover */
+  transform: scale(1);
+}
+
+/* Styling the blog content within the blog post */
+.blog-post .blog-content {
+  /* Setting the text color with semi-transparency */
+  color: rgba(0, 0, 0, 0.8);
+  /*Setting margin*/
+  margin-top: 20px;
+}
+
+/* Styling the image within the image container */
+.blog-post .blog-content .image-container img {
+  width: 50%;
+  height: auto;
+  float: right;
+  /* Setting the border */
+  border: 1px solid black;
+  /* Making the image circular */
+  border-radius: 5%;
+}
+
+/* Styling the h1 tag within the text container */
+.blog-post .blog-content .text-container h1 {
+  /* Setting the text color */
+  color: white;
+  /* Adding a text shadow effect */
+  text-shadow: 4px 2.5px black;
+}
+
+/* Styling the time tag within the text container */
+.blog-post .blog-content .text-container time {
+  /* Setting the text color */
+  color: rgb(0, 255, 0);
+}
+
+/* Styling the h2 tag within the text container */
+.blog-post .blog-content .text-container h2 {
+  /* Setting the text color */
+  color: rgb(255, 255, 255);
+}
+
+/* Styling the h4 tag within the text container */
+.blog-post .blog-content .text-container h4 {
+  /* Setting the text color */
+  color: rgb(0, 0, 0);
+}
+
+/* Styling all p tags within the text container except the first one */
+.blog-post .blog-content .text-container p:not(:first-child) {
+  /* Setting the text color */
+  color: grey;
+}
+
+/* Styling every odd p tag within the text container */
+.blog-post .blog-content .text-container p:nth-child(odd) {
+  /* Setting the text color */
+  color: rgb(255, 255, 255);
+}
+
+/* Styling the even p tag within the text container */
+.blog-post .blog-content .text-container p:nth-child(even) {
+  /* Setting the text color */
+  color: black;
+  font-weight: 600;
+}
+
+/* Defining the animation */
+@keyframes moveBox {
+  /* Setting the initial background color */
+  from {
+    background: #fff;
+  }
+  /* Setting the final background color */
+  to {
+    background: rgb(0, 98, 178);
+  }
+}

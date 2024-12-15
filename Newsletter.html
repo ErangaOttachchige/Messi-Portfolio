@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Newsletter Page</title>
+
+    <!-- googlefonts link -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playpen+Sans:wght@700&family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- boxicons link -->
+    <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
+
+    <!-- remixicons link -->
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+
+    <!--  css link -->
+    <link rel="stylesheet" type="text/css" href="./Style.css">
+
+</head>
+
+<body class="news-body">
+
+    <header class="main-header">
+        <a href="./About.html" class="logo">MESSI STATS</a>
+
+        <ul class="navlist">
+            <li><a href="./index.html">Home</a></li>
+            <li><a href="./About.html">About</a></li>
+            <li><a href="./Blogs.html">Blogs</a></li>
+            <li><a href="./Newsletter.html">Newsletter</a></li>
+        </ul>
+
+        <div class="bx bx-menu" id="menu-icon"></div>
+    </header>
+
+    <div class="newsletter-container">
+        <header class="news-header">
+            <!-- Using the name of "Subscribe to our Webpage" as the header title -->
+            <h1>Subscribe to Our Webpage</h1>
+        </header>
+
+        <form>
+            <!-- Using HTML5 form elements to create a form for the newsletter or message -->
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+            <label for="newsletter">Subscribe to our newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+            <label for="message">Send us a message:</label>
+            <textarea id="message" name="message"></textarea>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer>
+        <div class="footer">
+            <a href="https://www.facebook.com/profile.php?id=100080882588182&mibextid=ZbWKwL" target="_blank"><i
+                    class="ri-facebook-box-fill"></i></a> |
+            <a href="https://instagram.com/isuru_era_07?igshid=bXp0YWtvc2VoZmgw" target="_blank"><i
+                    class="ri-instagram-line"></i></a> |
+            <a href="https://www.linkedin.com/in/isuru-eranga-467590253" target="_blank"><i
+                    class="ri-linkedin-box-fill"></i></a>
+            <p>Copyright &copy; 2023 ISURU ERANGA</p>
+        </div>
+    </footer>
+
+    <!--Scroll reveal effect -->
+    <script src="https://unpkg.com/scrollreveal"></script>
+
+    <!--javaScript link -->
+    <script src="./Script.js"></script>
+
+</body>
+</html>
